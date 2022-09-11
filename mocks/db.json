@@ -1,0 +1,19 @@
+{
+  "cars-all": [
+    {
+      "brand": "Audi",
+      "model": "RS7",
+      "imgSrc": "https://www.szkolaangulara.pl/wp-content/uploads/2020/05/3-small.jpeg"
+    },
+    {
+      "brand": "Mercedes",
+      "model": "GT",
+      "imgSrc": "https://www.szkolaangulara.pl/wp-content/uploads/2020/05/4-small.jpeg"
+    },
+    {
+      "brand": "Nissan",
+      "model": "370z",
+      "imgSrc": "https://www.szkolaangulara.pl/wp-content/uploads/2020/05/4-small.jpeg"
+    }
+  ]
+}

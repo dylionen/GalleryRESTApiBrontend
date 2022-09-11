@@ -1,8 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Login } from './login';
-import { NgForm } from '@angular/forms';
 import { Loginservice } from './login.service';
-import { Token } from './token';
 
 
 @Component({
@@ -12,12 +10,14 @@ import { Token } from './token';
 })
 export class LoginComponent implements OnInit {
   public login!: Login;
+  public loginError: Boolean;
 
   setEmptyLogin() {
     return { username: '', password: '' };
   }
   constructor(private loginService: Loginservice) {
     this.login = this.setEmptyLogin();
+    this.loginError = false;
   }
 
   ngOnInit(): void {
@@ -28,10 +28,13 @@ export class LoginComponent implements OnInit {
     console.log(this.login);
     this.loginService.fetchLogin(this.login).subscribe({
       next: (v) => {
-        localStorage.setItem("Authentication",JSON.stringify(v.jwtToken));
+        localStorage.setItem('Authentication', JSON.stringify(v.jwtToken));
         console.log(v);
       },
-      error: (e) => console.error(e),
+      error: (e) => {
+        console.error(e);
+        this.loginError = true;
+      },
       complete: () => console.info('complete'),
     });
   }
