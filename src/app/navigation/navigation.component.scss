@@ -1,0 +1,39 @@
+:host {
+    width: 100%;
+    background: rgba(0, 221, 255, 0.981);
+    color: #ffff;
+    line-height: normal;
+    border: 1px solid #000;
+    border-radius: 5px;
+  
+    a {
+      color: #fff;
+      text-decoration: none;
+  
+      &.brand-logo {
+        front-size: 2px;
+      }
+    }
+  
+    ul {
+      float: right;
+  
+      li {
+        display: inline-block;
+        padding-left: 10px;
+        &:hover {
+          text-transform: uppercase;
+          font-size: 18px;
+        }
+        a {
+          display: block;
+          padding: 4px 10px;
+  
+          &.is-active {
+            color: #df1313;
+          }
+  
+        }
+      }
+    }
+  }

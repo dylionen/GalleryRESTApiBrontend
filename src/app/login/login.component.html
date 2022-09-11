@@ -1,0 +1,39 @@
+<form #newsForm="ngForm" (ngSubmit)="onSubmit()" novalidate>
+  <div class="row">
+    <div class="grid-16 input-group">
+      <label>Username</label>
+      <input
+        type="text"
+        class="input-control"
+        name="username"
+        #username="ngModel"
+        [(ngModel)]="login.username"
+        required
+      />
+      <p class="text-danger" [hidden]="username.valid || username.pristine">
+        Username required!
+      </p>
+    </div>
+    <div class="grid-16 input-group">
+      <label>Password</label>
+      <input
+        type="password"
+        class="input-control"
+        name="password"
+        #password="ngModel"
+        [(ngModel)]="login.password"
+        required
+      />
+      <p class="text-danger" [hidden]="password.valid || password.pristine">
+        Password required!
+      </p>
+    </div>
+    <div class="row">
+      <div class="grid-16">
+        <button class="button button-primary" [disabled]="!newsForm.form.valid">
+          Login
+        </button>
+      </div>
+    </div>
+  </div>
+</form>
