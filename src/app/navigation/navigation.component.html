@@ -1,20 +1,25 @@
 <div class="container">
-    <div class="row row-align-center">
-      <div class="grid-2">
-        <a href="/" class="brand-logo">Moja strona</a>
-      </div>
-      <div class="grid-10">
-        <ul>
-          <li>
-            <a routerLink="/dashboard" routerLinkActive="is-active">Strona główna</a>
-          </li>
-          <li>
-            <a routerLink="/cars" routerLinkActive="is-active">Cars</a>
-          </li>
-          <li>
-            <a routerLink="/login" routerLinkActive="is-active">Zaloguj</a>
-          </li>
-        </ul>
-      </div>
+  <div class="row row-align-center">
+    <div class="grid-2">
+      <a href="/" class="brand-logo">Moja strona</a>
+    </div>
+    <div class="grid-10">
+      <ul>
+        <li>
+          <a routerLink="/dashboard" routerLinkActive="is-active"
+            >Strona główna</a
+          >
+        </li>
+        <li>
+          <a routerLink="/cars" routerLinkActive="is-active">Cars</a>
+        </li>
+        <li *ngIf="username == null">
+          <a routerLink="/login" routerLinkActive="is-active">Zaloguj</a>
+        </li>
+        <li class="loginInfo" *ngIf="username != null">
+          <a>Zalogowany jako: {{ username }}</a>
+        </li>
+      </ul>
     </div>
   </div>
+</div>

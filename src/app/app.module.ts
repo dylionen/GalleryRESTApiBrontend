@@ -10,6 +10,7 @@ import { LoginComponent } from './login/login.component';
 import { FormsModule} from '@angular/forms';
 import { NavigationComponent } from './navigation/navigation.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { GalleriesComponent } from './galleries/galleries.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     CarCardComponent,
     LoginComponent,
     NavigationComponent,
-    DashboardComponent
+    DashboardComponent,
+    GalleriesComponent
   ],
   imports: [
     BrowserModule,

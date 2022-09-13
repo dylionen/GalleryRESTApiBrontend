@@ -37,3 +37,12 @@
       }
     }
   }
+
+
+  .loginInfo{
+    color: #df1313 !important;
+  }
+  
+  .loginInfo:hover{
+    color: blue($color: #000000) !important;
+  }

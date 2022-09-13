@@ -28,7 +28,8 @@ export class LoginComponent implements OnInit {
     console.log(this.login);
     this.loginService.fetchLogin(this.login).subscribe({
       next: (v) => {
-        localStorage.setItem('Authentication', JSON.stringify(v.jwtToken));
+        localStorage.setItem('Authorization', v.jwtToken);
+        localStorage.setItem('Username', JSON.stringify(v.username));
         console.log(v);
       },
       error: (e) => {
